@@ -1,0 +1,188 @@
+* {
+  font-family: 'JetBrains Mono', monospace;
+  padding: 0;
+  /* margin: 0; */
+  /* box-sizing: border-box; */
+}
+
+h1 {
+  margin: 0;
+}
+.title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+.currency-subtitle {
+  font-size: 1.2rem;
+}
+.currency-goto-btn {
+  width: 200px;
+  margin-right: 0;
+  background-color: #006400;
+}
+.currency-goto-btn:hover {
+  background-color: #3cb371;
+}
+
+body {
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* ✅ Make the table responsive */
+.table-container {
+  width: 100%;
+  max-width: 600px;
+  /* overflow-x: auto; */
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Grand Total Row */
+thead tr:first-child th:last-child {
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-align: right;
+  padding-right: 16px;
+}
+
+/* Column header row */
+thead tr:nth-child(2) th {
+  background-color: #4a90e2;
+  /* background-color: #0000cd; */
+  color: white;
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  position: sticky;
+  top: 60px;
+  z-index: 1;
+}
+
+tbody td {
+  border: 1px solid #ddd;
+  padding: 10px 8px;
+  text-align: center;
+  font-size: 1.2rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+tbody td:first-child {
+  text-align: right;
+}
+
+tbody {
+  display: block;
+  /* max-height: 250px;
+        overflow-y: auto; */
+}
+
+thead,
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+input[type='number'] {
+  width: 70px;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+tbody tr.active {
+  background-color: #eaf4ff;
+}
+
+.grand-total-label {
+  background-color: #000080 !important;
+  color: white !important;
+}
+.grand-total-value {
+  background-color: #d9e1f2 !important;
+}
+button {
+  /* margin-top: 16px; */
+  background-color: #e74c3c;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+button:hover {
+  background-color: #c0392b;
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  table {
+    font-size: 1rem;
+  }
+  input[type='number'] {
+    width: 55px;
+    font-size: 1rem;
+  }
+  thead tr:first-child th {
+    font-size: 1.4rem;
+  }
+  thead tr:first-child th:last-child {
+    font-size: 1rem;
+  }
+  tbody td {
+    font-size: 1rem;
+  }
+  .table-container {
+    width: 100%;
+    max-width: 600px;
+    /* overflow-x: auto; */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}

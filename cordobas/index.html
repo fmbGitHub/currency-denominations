@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Table</title>
+    <!-- ✅ Import JetBrains Mono from Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <!-- ✅ Title above the table -->
+    <div class="title-container">
+      <h1>
+        RESUMEN DE CONTEO <br /><span class="currency-subtitle"
+          >(CORDOBAS)</span
+        >
+      </h1>
+      <button id="currency-btn" class="currency-goto-btn">IR A DOLARES</button>
+    </div>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th id="grand-total-label">GRAN TOTAL</th>
+            <th id="grand-total-value" colspan="2">$ 0.00</th>
+          </tr>
+          <tr>
+            <th>DENOMINACION</th>
+            <th>CANTIDAD</th>
+            <th>TOTAL</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <tr>
+            <td data-denomination="1000">1,000</td>
+            <td><input type="number" min="0" value="0" /></td>
+            <td class="row-total">C$ -</td>
+          </tr>
+          <tr>
+            <td data-denomination="500">500</td>
+            <td><input type="number" min="0" value="0" /></td>
+            <td class="row-total">C$ -</td>
+          </tr>
+          <tr>
+            <td data-denomination="100">100</td>
+            <td><input type="number" min="0" value="0" /></td>
+            <td class="row-total">C$ -</td>
+          </tr>
+          <tr>
+            <td data-denomination="50">50</td>
+            <td><input type="number" min="0" value="0" /></td>
+            <td class="row-total">C$ 100.00</td>
+          </tr>
+          <tr>
+            <td data-denomination="20">20</td>
+            <td><input type="number" min="0" value="0" /></td>
+            <td class="row-total">C$ 40.00</td>
+          </tr>
+          <tr>
+            <td data-denomination="10">10</td>
+            <td><input type="number" min="0" value="0" /></td>
+            <td class="row-total">C$ 20.00</td>
+          </tr>
+          <tr>
+            <td data-denomination="5">5</td>
+            <td><input type="number" min="0" value="0" /></td>
+            <td class="row-total">C$ 50.00</td>
+          </tr>
+          <tr>
+            <td data-denomination="1">1</td>
+            <td><input type="number" min="0" value="0" /></td>
+            <td class="row-total">C$ 13.00</td>
+          </tr>
+          <!-- <tr>
+          <td data-denomination="0.50">0.50</td>
+          <td><input type="number" min="0" value="0" /></td>
+          <td class="row-total">C$ 0.50</td>
+        </tr>
+        <tr>
+          <td data-denomination="0.25">0.25</td>
+          <td><input type="number" min="0" value="0" /></td>
+          <td class="row-total">C$ 0.25</td>
+        </tr> -->
+        </tbody>
+      </table>
+    </div>
+
+    <button id="clear-btn">BORRAR TODO</button>
+  </body>
+</html>
